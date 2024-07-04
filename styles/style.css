@@ -1,0 +1,378 @@
+html {
+    font-family: "Inter", sans-serif;
+    scroll-margin-top: 200px; /**/
+}
+
+header nav a {
+    text-decoration: none;
+    color: #2b2b2d;
+}
+
+#nav-wrapper {
+    display: flex;
+    padding: 20px 0px 0px;
+
+    align-items: center;
+    justify-content: space-between; /*space-between dar nu gap, pentru ca
+    gap va trebui sa cautam care este distanta intre iplto si in caz ca ecranul dispozitivului
+    va fi mai mic, gap va ramine fixat si va aparea jos bara de rulare in parti, iar 
+    faptul ca latimea este limitata de max-width, spacebetween va determina 
+    distanta automat, in dependenta de latimea ecranului se va adapta!*/
+}
+
+#nav-wrapper ul {
+    display: flex;
+    gap: 32px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#nav-wrapper li {
+    list-style: none;
+    /*display: inline + margin-left:32px analogic pentru gap:32px*/
+    
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #323539;
+
+    cursor: pointer;
+}
+
+.logospr {
+    height: 70px;
+    width: auto;
+}
+
+.logo {
+    font-size: 30px;
+    line-height: 44px; 
+    font-weight: 900;
+    color: #0a77ff;
+}
+
+.container {
+    max-width: 1216px;
+    margin: auto;
+}
+
+/* sectiunea despre */
+
+h1 {
+    font-size: 52px;
+    line-height: 60px;
+    font-weight: bold;
+
+    margin-top: 24px;
+    color: #323539;
+}
+
+#despre {
+    text-align: center;
+    padding: 80px 0px;
+}
+
+#despre p {
+    margin: 24px 0 36px;
+}
+.paragraph-margin {
+    margin: 24px 0 36px;
+}
+.button-blue {
+    color: white;
+    background-color: #0a77ff;
+    padding: 12px 20px;
+
+    border-color: #0a77ff;
+    border-radius: 4px;
+    border-style: none;
+
+    box-shadow: none;
+
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+/* sectiunea galerie */
+#galerie {
+    padding-top: 38px;
+}
+
+.heading2 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+
+    color: #323539;
+}
+
+#galerie h2, #galerie p {
+    /* #galerie h2,p */
+    text-align: center;
+}
+
+#galerie-wrapper {
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    margin-top: 64px;
+    padding-bottom: 50px;
+}
+
+.profesor {
+    position: relative;
+    max-height: 332px;
+    width: 384px;
+    border-radius: 12px;
+
+    overflow: hidden; /* ca fit image in figma*/
+}
+
+.profesor img {
+    object-fit: cover; /*posibilitatea de a seta stilul de afisarea imaginii in cadrul unui div*/
+    height: 332px;
+    min-width: 384px;
+    object-position: center 25%;
+}
+
+.despre-profesor {
+    background-color: rgba(0, 0, 0, 0.44);
+
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column; /*justify deja aliniaza pe verticala, iar align items pe orizontala*/
+    justify-content: end;
+
+    padding: 24px 32px;
+
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.despre-profesor span {
+    color: white;
+}
+
+.nume {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.pozitia {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: regular;
+}
+
+.despre-profesor:hover{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+/* .profesor img {
+    display: block;
+    width: 300px;
+    height: 360px;
+    border-radius: 12px;
+}
+
+.despre-profesor {
+    width: 300px;
+    height: 360px;
+
+    position: absolute; /*corect
+    top: 0; /*corect
+    left: 0; /*corect
+
+    background: rgba(0, 0, 0, 0.3); /*corect
+    opacity: 0;
+    transition: 0.6s;
+
+    border-radius: 10px;
+
+    display: flex; /*corect
+    flex-direction: column;
+    justify-content: end; 
+    align-items: start; /*corect
+
+    padding-bottom: 10px;
+    padding-left: 10px;
+    
+    color: white;
+}
+
+.despre-profesor:hover {
+    opacity: 1;
+} */
+
+/* section rewards */
+#rewards h2, #rewards p {
+    text-align: center;
+}
+
+/* footer */
+footer {
+    background-color: black;
+    padding: 64px 0;
+    /* margin-top: 64px; */
+    text-align: left;
+    border-top: 1px solid #2b2b2d;
+}
+
+.text-white {
+    color: white!important;
+}
+
+.text-black {
+    color: white!important;
+}
+
+#footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+#footer-container p {
+    max-width: 500px;
+    text-align: left!important;
+}
+
+#footer-container a {
+    margin-right: 24px;
+}
+
+/* reguli generale */
+.paragraph {
+    font-size: 18px;
+    line-height: 26px;
+    color: #838295;
+}
+
+#branding {
+    padding: 100px 0px 30px;
+}
+
+#branding-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#branding-left {
+    width: 650px;
+}
+
+#branding-right img {
+    width: 500px;
+    height: auto;
+}
+/* our latest updates */
+#features {
+    background-color: black;
+    padding: 50px 50px 0;
+
+}
+
+.descriere-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 40px 0px;
+}
+
+.descriere-left {
+    width: 50%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#mentori {
+    background-color: black;
+    padding: 50px;
+
+}
+
+.mentori-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+
+    margin-top: 64px;
+}
+
+.descriere-curs {
+    position: relative;
+    max-height: 332px;
+    width: 384px;
+
+}
+
+.harta {
+    width: 550px;
+}
+
+.logospr-white {
+    width: 200px;
+}
+
+#galerie-foto-container {
+    padding-top: 50px;
+}
+
+.galerie-foto-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    gap: 10px;
+
+    padding-bottom: 50px;
+}
+
+.orizontal {
+    height: 470px;
+    max-width: 705px;
+
+    object-fit: cover;
+}
+
+.foto {
+    border-radius: 5px;
+}
+
+.vertical {
+    max-height: 500px;
+    
+    overflow: hidden;
+}
+
+.vertical img {
+    object-fit: cover; /*posibilitatea de a seta stilul de afisarea imaginii in cadrul unui div*/
+    object-position: center 100%;
+
+    height: 470px;
+    min-width: 384px;
+}
+
+.videofit {
+    display: flex;
+    justify-content: center;
+}
